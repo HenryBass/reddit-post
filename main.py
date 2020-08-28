@@ -12,8 +12,8 @@ while True:
     submission = reddit.submission(id="iiamfv")
     ratio = submission.upvote_ratio
     upvotes = round((ratio*submission.score)/(2*ratio-1)) if ratio != 0.5 else round(submission.score/2)
-    downvotes = ups-submission.score
-    edited = str(upvotes)+' upvotes,'+'\n\n'+str(downvotes)+' downvotes,'+ \n\n"+"and "+str(submission.num_comments)+' comments!'+'\n\n'+'Credit to u/Krukerfluk'+'\n\n'+'Code: https://github.com/CalvinMiller190/reddit-post'
+    downvotes = upvotes-submission.score
+    edited = str(upvotes) + ' upvotes,' + '\n\n' + str(downvotes) + ' downvotes,' + '\n\n' + 'and ' + str(submission.num_comments) + ' comments!' + '\n\n' + 'Credit to u/Krukerfluk' + '\n\n' + 'Code: https://github.com/CalvinMiller190/reddit-post'
     submission.edit(edited)
     changes += 1
     print(f"Changed {changes} times!")
