@@ -9,7 +9,7 @@ reddit = praw.Reddit(client_id="****",
 changes = 0
 
 while True:
-    submission = reddit.submission(id="iiamfv")
+    submission = reddit.submission(id="****")
     ratio = submission.upvote_ratio
     upvotes = round((ratio*submission.score)/(2*ratio-1)) if ratio != 0.5 else round(submission.score/2)
     downvotes = upvotes-submission.score
